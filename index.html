@@ -3,26 +3,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💚 lunas cyberspace 💚</title>
+    <title>💖 lunas cyberspace 💖</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-    <!-- Trashy Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Y2K & Blingee Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            /* Neon-Trash Hintergrund mit Sims-Grün */
-            background: linear-gradient(90deg, #00ff00, #33cc33, #66ff66, #33cc33, #00ff00);
+            /* Neon-Pink Y2K Hintergrund mit Chrome-Vibes */
+            background: linear-gradient(90deg, #ff0099, #ff66cc, #ff33cc, #ff0099);
             background-size: 400% 400%;
-            animation: bg-move 5s infinite alternate;
+            animation: bg-move 6s infinite alternate;
             margin: 0;
-            font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
+            font-family: 'Orbitron', 'Press Start 2P', sans-serif;
             text-align: center;
             height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
         @keyframes bg-move {
@@ -33,70 +34,68 @@
         .title-container {
             display: flex;
             align-items: center;
-            gap: 15px; /* Abstand zwischen den Elementen */
+            gap: 15px;
         }
 
         h2 {
             font-size: 3em;
             color: white;
-            text-shadow: 0px 0px 10px #00ff00, 0px 0px 20px #33cc33, 0px 0px 30px #66ff66;
-            animation: glitter 1s infinite alternate, rainbow-text 3s infinite linear;
+            text-shadow: 0px 0px 10px #ff0099, 0px 0px 20px #ff33cc, 0px 0px 30px #ff66cc;
+            animation: glitter 1s infinite alternate;
         }
 
         @keyframes glitter {
-            0% { text-shadow: 0 0 5px white, 0 0 10px #00ff00, 0 0 15px #33cc33, 0 0 20px #66ff66; }
-            100% { text-shadow: 0 0 10px white, 0 0 20px #33cc33, 0 0 25px #66ff66, 0 0 30px #00ff00; }
+            0% { text-shadow: 0 0 5px white, 0 0 10px #ff0099, 0 0 15px #ff33cc, 0 0 20px #ff66cc; }
+            100% { text-shadow: 0 0 10px white, 0 0 20px #ff33cc, 0 0 25px #ff66cc, 0 0 30px #ff0099; }
         }
 
         .glitter-gif {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
         }
 
         model-viewer {
             width: 80%;
             height: 70%;
             margin: 20px auto;
-            border: 15px dashed lime; /* Dickerer Kreis um das AR-Modell */
+            border: 15px double hotpink;
             border-radius: 50%;
-            box-shadow: 0px 0px 25px 10px lime, 0px 0px 50px 20px white; /* Glitzernder Effekt */
-            animation: glow-pulse 1.5s infinite alternate; /* Animierter Glow-Effekt */
+            box-shadow: 0px 0px 30px 10px pink, 0px 0px 60px 30px white;
+            animation: glow-pulse 1.5s infinite alternate;
         }
 
         @keyframes glow-pulse {
-            0% {
-                box-shadow: 0px 0px 15px 5px lime, 0px 0px 30px 10px white;
-            }
-            100% {
-                box-shadow: 0px 0px 25px 10px lime, 0px 0px 50px 20px white;
-            }
+            0% { box-shadow: 0px 0px 15px 5px pink, 0px 0px 30px 10px white; }
+            100% { box-shadow: 0px 0px 25px 10px hotpink, 0px 0px 50px 20px white; }
         }
 
-        /* Blinkender Sims-Text */
+        /* Blinkender Trash-Text */
         .blink {
             animation: blink 0.5s infinite alternate;
+            font-size: 1.8em;
+            color: hotpink;
+            text-shadow: 0px 0px 10px white;
         }
 
         @keyframes blink {
             0% { opacity: 1; }
-            100% { opacity: 0; }
+            100% { opacity: 0.7; }
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Glitzernde Überschrift mit Sims-GIFs -->
+    <!-- Glitzernde Y2K-Überschrift mit Blingee-GIFs -->
     <div class="title-container">
-        <img src="https://media.giphy.com/media/xUA7aRzLqHDZZ0nPYU/giphy.gif" class="glitter-gif" alt="Sims 3 Dance">
-        <h2>💚 lunas cyberspace 💚</h2>
-        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" class="glitter-gif" alt="Sims 3 Fire">
+        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" class="glitter-gif" alt="Glitter Star">
+        <h2>💖 lunas cyberspace 💖</h2>
+        <img src="https://media.giphy.com/media/l3vR3Pz3pVxACReeQ/giphy.gif" class="glitter-gif" alt="Blingee Sparkles">
     </div>
 
     <!-- 3D Modell -->
     <model-viewer id="model-viewer" src="digitalbody.glb"
                   ios-src="digitalbody.usdz"
-                  alt="💎 fancy Sims 3 Model 💎"
+                  alt="💎 Fancy Cyber Model 💎"
                   ar
                   auto-rotate
                   camera-controls
@@ -104,13 +103,13 @@
                   environment-image="neutral">   
     </model-viewer>
 
-    <!-- Blinkender, mega-trashiger Sims 3 Text -->
-    <p class="blink" style="font-size: 1.5em; color: lime; text-shadow: 0px 0px 10px white;">🌟 babe du siehst so sexy aus, wie du durch dein instagram archiv gehst🌟</p>
+    <!-- Blinkender ultra-trashiger Y2K Text -->
+    <p class="blink">✨ babe du siehst so sexy aus wie du 8h am tag in deinem insta archiv hängst ✨</p>
 
-    <!-- Noch mehr Sims-GIFs -->
-    <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="200px" alt="Plumbob Shine">
-    <img src="https://media.giphy.com/media/xUA7aRzLqHDZZ0nPYU/giphy.gif" width="200px" alt="Sims 3 Dance Party">
-    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200px" alt="Shiny Sims Moment">
+    <!-- Noch mehr Glitzer-GIFs -->
+    <img src="https://media.giphy.com/media/J39gurpvX9b7WA6VR1/giphy.gif" width="200px" alt="Blingee Diamonds">
+    <img src="https://media.giphy.com/media/l41lJ4RxWQYf2k1cQ/giphy.gif" width="200px" alt="Shiny Pink">
+    <img src="https://media.giphy.com/media/xTiTnwJXjoQxTQcG2A/giphy.gif" width="200px" alt="Cyber Chrome">
 
     <script>
         async function checkARCoreCompatibility() {
@@ -128,4 +127,5 @@
 
 </body>
 </html>
+
 
