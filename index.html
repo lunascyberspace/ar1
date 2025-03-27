@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lunas cyberspace</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-      body {
-        /* Hintergrund: gestreifte rosa-pinke Farbe */
-        background: linear-gradient(45deg, #ff66b2 25%, #ff3399 25%, #ff3399 50%, #ff66b2 50%, #ff66b2 75%, #ff3399 75%, #ff3399 100%);
-        background-size: 28.28px 28.28px; /* Größe der Streifen */
-        margin: 0;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        height: 100vh;
-      }
+        body {
+            /* Horizontale breite Streifen */
+            background: linear-gradient(90deg, #ff66b2 50%, #ff3399 50%);
+            background-size: 80px 80px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+        }
 
-      h2 {
-        color: white;
-        margin-top: 20px;
-      }
+        h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff3399, 0 0 20px #ff66b2;
+            animation: glitter 1.5s infinite alternate;
+        }
 
-      model-viewer {
-        width: 80%;
-        height: 70%;
-        margin: 20px auto;
-        border: 5px solid white;
-        border-radius: 15px;
-      }
+        @keyframes glitter {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff3399, 0 0 20px #ff66b2; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff3399, 0 0 25px #ff66b2, 0 0 30px #ff3399; }
+        }
+
+        model-viewer {
+            width: 80%;
+            height: 70%;
+            margin: 20px auto;
+            border: 5px solid white;
+            border-radius: 15px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h2>lunas cyberspace</h2>
     <model-viewer id="model-viewer" src="test.glb"
                   ios-src="test.usdz"
@@ -45,13 +54,16 @@
     <script>
         async function checkARCoreCompatibility() {
             const modelViewer = document.getElementById('model-viewer');
-            const isARCoreSupported = await navigator.xr.isSessionSupported('immersive-ar');
-            if (!isARCoreSupported) {
+            if (navigator.xr && await navigator.xr.isSessionSupported('immersive-ar')) {
+                console.log("AR wird unterstützt!");
+            } else {
                 modelViewer.removeAttribute('ar');
                 modelViewer.removeAttribute('ar-modes');
-                alert('Your device is not compatible with AR features. You can still view the 3D model.');
+                alert('AR wird nicht unterstützt.');
             }
         }
-
         document.addEventListener('DOMContentLoaded', checkARCoreCompatibility);
     </script>
+</body>
+</html>
+
