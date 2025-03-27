@@ -1,102 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💖 lunas cyber space 💖</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-    <!-- Y2K & Bling Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
     <style>
         body {
             background: url('/mnt/data/1000202256.jpg') no-repeat center center fixed;
             background-size: cover;
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
             text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            backdrop-filter: blur(5px);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: hotpink;
         }
-
-        .title-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(255, 105, 180, 0.7);
-            padding: 10px;
-            border-radius: 10px;
+        marquee {
+            font-size: 20px;
+            color: yellow;
+            background: purple;
+            font-weight: bold;
         }
-
-        h2 {
-            font-size: 3em;
-            font-family: 'Press Start 2P', cursive;
-            color: white;
-            text-shadow: 0px 0px 10px #ff33cc, 0px 0px 20px #ff99cc, 0px 0px 30px #ff66b2;
-            animation: glitter 1s infinite alternate;
+        blink {
+            font-size: 24px;
+            color: red;
         }
-
-        @keyframes glitter {
-            0% { text-shadow: 0 0 5px white, 0 0 10px #ff33cc, 0 0 15px #ff99cc, 0 0 20px #ff66b2; }
-            100% { text-shadow: 0 0 10px white, 0 0 20px #ff99cc, 0 0 25px #ff66b2, 0 0 30px #ff33cc; }
-        }
-
-        .glitter-gif {
-            width: 100px;
-            height: 100px;
-        }
-
         model-viewer {
-            z-index:9999;
-            position: fixed;
-        }
-
-        @keyframes glow-pulse {
-            0% { box-shadow: 0px 0px 15px 5px hotpink, 0px 0px 30px 10px white; }
-            100% { box-shadow: 0px 0px 25px 10px hotpink, 0px 0px 50px 20px white; }
-        }
-
-        .y2k-text {
-            font-size: 1.5em;
-            font-family: 'Orbitron', sans-serif;
-            color: white;
-            text-shadow: 0px 0px 10px #ff66b2, 0px 0px 20px #ff33cc;
-            padding: 10px;
-            background: rgba(255, 20, 147, 0.7);
-            border-radius: 10px;
+            width: 90%;
+            height: 70vh;
+            border: 10px dashed lime;
+            background: black;
         }
     </style>
 </head>
 <body>
-
-    <div class="title-container">
-        <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" class="glitter-gif" alt="Blingee Glitter">
-        <h2>💖 lunas cyber space 💖</h2>
-        <img src="https://media.giphy.com/media/l1J3pT7PfLgSRMnFC/giphy.gif" class="glitter-gif" alt="Blingee Sparkle">
-    </div>
-
-    <model-viewer id="model-viewer" src="digitalbody.glb"
-                  ios-src="digitalbody.usdz"
-                  alt="💎 Cyber Princess 3D Model 💎"
-                  ar
-                  auto-rotate
-                  camera-controls
-                  ar-modes="webxr scene-viewer quick-look" 
-                  environment-image="neutral">   
+    <marquee>✨ lunas cyber space ✨</marquee>
+    <h1><blink>💖 Ultimate Y2K Vibes 💖</blink></h1>
+    <model-viewer id="model-viewer" src="digitalbody.glb" ar auto-rotate camera-controls>   
     </model-viewer>
-
-    <p class="y2k-text">✨ babe du siehst so sexy aus wie du 8h am tag in deinem insta archiv hängst ✨</p>
-
-    
-
-
+    <p><blink> babe du siehst so sexy aus wie du 5h am tag auf deinem eigenen instagram profil hängst </blink></p>
 </body>
 </html>
 
-
+      
