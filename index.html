@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💖 lunas cyberspace 💖</title>
+    <title>💚 lunas cyberspace 💚</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
+
     <!-- Trashy Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
         body {
-            /* Neon-Trash Hintergrund mit Regenbogen-Farben */
-            background: linear-gradient(90deg, #ff00ff, #ff3399, #ff66b2, #ff3399, #ff00ff);
+            /* Neon-Trash Hintergrund mit Sims-Grün */
+            background: linear-gradient(90deg, #00ff00, #33cc33, #66ff66, #33cc33, #00ff00);
             background-size: 400% 400%;
             animation: bg-move 5s infinite alternate;
             margin: 0;
@@ -38,23 +38,14 @@
 
         h2 {
             font-size: 3em;
-            color: yellow;
-            text-shadow: 0px 0px 10px white, 0px 0px 20px #ff00ff, 0px 0px 30px #ff3399;
+            color: white;
+            text-shadow: 0px 0px 10px #00ff00, 0px 0px 20px #33cc33, 0px 0px 30px #66ff66;
             animation: glitter 1s infinite alternate, rainbow-text 3s infinite linear;
         }
 
         @keyframes glitter {
-            0% { text-shadow: 0 0 5px white, 0 0 10px #ff3399, 0 0 15px #ff00ff, 0 0 20px #ff66b2; }
-            100% { text-shadow: 0 0 10px white, 0 0 20px #ff00ff, 0 0 25px #ff66b2, 0 0 30px #ff3399; }
-        }
-
-        @keyframes rainbow-text {
-            0% { color: red; }
-            20% { color: orange; }
-            40% { color: yellow; }
-            60% { color: green; }
-            80% { color: blue; }
-            100% { color: purple; }
+            0% { text-shadow: 0 0 5px white, 0 0 10px #00ff00, 0 0 15px #33cc33, 0 0 20px #66ff66; }
+            100% { text-shadow: 0 0 10px white, 0 0 20px #33cc33, 0 0 25px #66ff66, 0 0 30px #00ff00; }
         }
 
         .glitter-gif {
@@ -66,12 +57,22 @@
             width: 80%;
             height: 70%;
             margin: 20px auto;
-            border: 5px dashed yellow;
+            border: 15px dashed lime; /* Dickerer Kreis um das AR-Modell */
             border-radius: 50%;
-            box-shadow: 0px 0px 15px white;
+            box-shadow: 0px 0px 25px 10px lime, 0px 0px 50px 20px white; /* Glitzernder Effekt */
+            animation: glow-pulse 1.5s infinite alternate; /* Animierter Glow-Effekt */
         }
 
-        /* Blinkender Text */
+        @keyframes glow-pulse {
+            0% {
+                box-shadow: 0px 0px 15px 5px lime, 0px 0px 30px 10px white;
+            }
+            100% {
+                box-shadow: 0px 0px 25px 10px lime, 0px 0px 50px 20px white;
+            }
+        }
+
+        /* Blinkender Sims-Text */
         .blink {
             animation: blink 0.5s infinite alternate;
         }
@@ -85,17 +86,17 @@
 </head>
 <body>
 
-    <!-- Glitzernde Überschrift mit GIFs -->
+    <!-- Glitzernde Überschrift mit Sims-GIFs -->
     <div class="title-container">
-        <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" class="glitter-gif" alt="Glitzer">
-        <h2>💖 lunas cyberspace 💖</h2>
-        <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" class="glitter-gif" alt="Glitzer">
+        <img src="https://media.giphy.com/media/xUA7aRzLqHDZZ0nPYU/giphy.gif" class="glitter-gif" alt="Sims 3 Dance">
+        <h2>💚 lunas sims cyberspace 💚</h2>
+        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" class="glitter-gif" alt="Sims 3 Fire">
     </div>
 
-    <!-- 3D Model -->
+    <!-- 3D Modell -->
     <model-viewer id="model-viewer" src="digitalbody.glb"
                   ios-src="digitalbody.usdz"
-                  alt="💎 fancy 3D model 💎"
+                  alt="💎 fancy Sims 3 Model 💎"
                   ar
                   auto-rotate
                   camera-controls
@@ -103,13 +104,13 @@
                   environment-image="neutral">   
     </model-viewer>
 
-    <!-- Blinkender, mega-trashiger Text -->
-    <p class="blink" style="font-size: 1.5em; color: cyan; text-shadow: 0px 0px 10px white;">🌟 Welcome to the future, baby! 🌟</p>
+    <!-- Blinkender, mega-trashiger Sims 3 Text -->
+    <p class="blink" style="font-size: 1.5em; color: lime; text-shadow: 0px 0px 10px white;">🌟 Watcher Mode Activated 🌟</p>
 
-    <!-- Mehr Glitzer für maximalen Trash -->
-    <img src="https://media.giphy.com/media/d31vTpVi1LAcDvdm/giphy.gif" width="200px" alt="bling bling">
-    <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="200px" alt="shiny star">
-    <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="200px" alt="rainbow boom">
+    <!-- Noch mehr Sims-GIFs -->
+    <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="200px" alt="Plumbob Shine">
+    <img src="https://media.giphy.com/media/xUA7aRzLqHDZZ0nPYU/giphy.gif" width="200px" alt="Sims 3 Dance Party">
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200px" alt="Shiny Sims Moment">
 
     <script>
         async function checkARCoreCompatibility() {
@@ -127,3 +128,4 @@
 
 </body>
 </html>
+
