@@ -5,50 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lunas cyberspace</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body {
+        /* Hintergrund: gestreifte rosa-pinke Farbe */
+        background: linear-gradient(45deg, #ff66b2 25%, #ff3399 25%, #ff3399 50%, #ff66b2 50%, #ff66b2 75%, #ff3399 75%, #ff3399 100%);
+        background-size: 28.28px 28.28px; /* Größe der Streifen */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        height: 100vh;
+      }
+
+      h2 {
+        color: white;
+        margin-top: 20px;
+      }
+
+      model-viewer {
+        width: 80%;
+        height: 70%;
+        margin: 20px auto;
+        border: 5px solid white;
+        border-radius: 15px;
+      }
+    </style>
   </head>
   <body>
-    body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: #fff;
-        }
+    <h2>lunas cyberspace</h2>
+    <model-viewer id="model-viewer" src="test.glb"
+                  ios-src="test.usdz"
+                  alt="kugel ;*"
+                  ar
+                  auto-rotate
+                  camera-controls
+                  ar-modes="webxr scene-viewer quick-look" 
+                  environment-image="neutral">   
+    </model-viewer>
 
-        /* Das Streifenmuster */
-        .striped-background {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .striped-background div {
-            height: 10%;
-            width: 100%;
-            background-image: linear-gradient(45deg, #ff69b4, #ff1493); /* Rosa und Pink Streifen */
-            animation: stripeMovement 5s linear infinite;
-        }
-
-        /* Animation für das Streifenmuster */
-        @keyframes stripeMovement {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-<H2>lunas cyberspace</H2>
-  <model-viewer src="test.glb"
-                ios-src="test.usdz"
-                alt="kugel ;*"
-                ar
-                auto-rotate
-                camera-controls
-                ar-modes="webxr scene-viewer quick-look" 
-                environment-image="neutral">   
-  </model-viewer>
- <script>
+    <script>
         async function checkARCoreCompatibility() {
             const modelViewer = document.getElementById('model-viewer');
             const isARCoreSupported = await navigator.xr.isSessionSupported('immersive-ar');
@@ -61,5 +55,3 @@
 
         document.addEventListener('DOMContentLoaded', checkARCoreCompatibility);
     </script>
-   </body>
-</html>
