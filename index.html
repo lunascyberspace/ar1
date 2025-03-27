@@ -7,6 +7,37 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
+    body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        /* Das Streifenmuster */
+        .striped-background {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .striped-background div {
+            height: 10%;
+            width: 100%;
+            background-image: linear-gradient(45deg, #ff69b4, #ff1493); /* Rosa und Pink Streifen */
+            animation: stripeMovement 5s linear infinite;
+        }
+
+        /* Animation für das Streifenmuster */
+        @keyframes stripeMovement {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
 <H2>lunas cyberspace</H2>
   <model-viewer src="test.glb"
                 ios-src="test.usdz"
