@@ -107,10 +107,6 @@
             const modelViewer = document.getElementById('model-viewer');
             if (navigator.xr && await navigator.xr.isSessionSupported('immersive-ar')) {
                 console.log("AR wird unterstützt!");
-            } else {
-                modelViewer.removeAttribute('ar');
-                modelViewer.removeAttribute('ar-modes');
-                alert('AR wird nicht unterstützt.');
             }
         }
         document.addEventListener('DOMContentLoaded', checkARCoreCompatibility);
