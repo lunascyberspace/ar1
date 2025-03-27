@@ -3,53 +3,113 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lunas cyberspace</title>
+    <title>💖 lunas cyberspace 💖</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Trashy Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
         body {
-            /* Horizontale breite Streifen */
-            background: linear-gradient(90deg, #ff66b2 50%, #ff3399 50%);
-            background-size: 80px 80px;
+            /* Neon-Trash Hintergrund mit Regenbogen-Farben */
+            background: linear-gradient(90deg, #ff00ff, #ff3399, #ff66b2, #ff3399, #ff00ff);
+            background-size: 400% 400%;
+            animation: bg-move 5s infinite alternate;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', 'Press Start 2P', cursive;
             text-align: center;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes bg-move {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Abstand zwischen den Elementen */
         }
 
         h2 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5em;
-            color: white;
-            text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff3399, 0 0 20px #ff66b2;
-            animation: glitter 1.5s infinite alternate;
+            font-size: 3em;
+            color: yellow;
+            text-shadow: 0px 0px 10px white, 0px 0px 20px #ff00ff, 0px 0px 30px #ff3399;
+            animation: glitter 1s infinite alternate, rainbow-text 3s infinite linear;
         }
 
         @keyframes glitter {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff3399, 0 0 20px #ff66b2; }
-            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff3399, 0 0 25px #ff66b2, 0 0 30px #ff3399; }
+            0% { text-shadow: 0 0 5px white, 0 0 10px #ff3399, 0 0 15px #ff00ff, 0 0 20px #ff66b2; }
+            100% { text-shadow: 0 0 10px white, 0 0 20px #ff00ff, 0 0 25px #ff66b2, 0 0 30px #ff3399; }
+        }
+
+        @keyframes rainbow-text {
+            0% { color: red; }
+            20% { color: orange; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: purple; }
+        }
+
+        .glitter-gif {
+            width: 100px;
+            height: 100px;
         }
 
         model-viewer {
             width: 80%;
             height: 70%;
             margin: 20px auto;
-            border: 5px solid white;
-            border-radius: 15px;
+            border: 5px dashed yellow;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px white;
         }
+
+        /* Blinkender Text */
+        .blink {
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
     </style>
 </head>
 <body>
-    <h2>lunas cyberspace</h2>
+
+    <!-- Glitzernde Überschrift mit GIFs -->
+    <div class="title-container">
+        <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" class="glitter-gif" alt="Glitzer">
+        <h2>💖 lunas cyberspace 💖</h2>
+        <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" class="glitter-gif" alt="Glitzer">
+    </div>
+
+    <!-- 3D Model -->
     <model-viewer id="model-viewer" src="digitalbody.glb"
                   ios-src="digitalbody.usdz"
-                  alt="kugel ;*"
+                  alt="💎 fancy 3D model 💎"
                   ar
                   auto-rotate
                   camera-controls
                   ar-modes="webxr scene-viewer quick-look" 
                   environment-image="neutral">   
     </model-viewer>
+
+    <!-- Blinkender, mega-trashiger Text -->
+    <p class="blink" style="font-size: 1.5em; color: cyan; text-shadow: 0px 0px 10px white;">🌟 Welcome to the future, baby! 🌟</p>
+
+    <!-- Mehr Glitzer für maximalen Trash -->
+    <img src="https://media.giphy.com/media/d31vTpVi1LAcDvdm/giphy.gif" width="200px" alt="bling bling">
+    <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="200px" alt="shiny star">
+    <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="200px" alt="rainbow boom">
 
     <script>
         async function checkARCoreCompatibility() {
@@ -64,6 +124,6 @@
         }
         document.addEventListener('DOMContentLoaded', checkARCoreCompatibility);
     </script>
+
 </body>
 </html>
-
