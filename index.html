@@ -1,43 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>💖 lunas cyber space 💖</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR model</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
-        body {
-            background: url('/mnt/data/1000202256.jpg') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            color: hotpink;
-        }
-        marquee {
-            font-size: 20px;
-            color: yellow;
-            background: purple;
-            font-weight: bold;
-        }
-        blink {
-            font-size: 24px;
-            color: red;
-        }
-        model-viewer {
-            width: 90%;
-            height: 70vh;
-            border: 10px dashed lime;
-            background: black;
-        }
+               body {
+        background-color: greenyellow;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto; /* Allows scrolling for overflowing content */
+      }
+
+      model-viewer {
+        width: 80%;
+        height: 50%; /* Ensures it takes 50% of the screen height */
+        min-height: 300px; /* Sets a minimum height of 300px */
+        max-width: 800px; /* Sets a maximum width of 800px */
+        margin: 20px 0;
+        background-color: violet;
+        flex-shrink: 0; /* Prevents shrinking of the model-viewer */
+      }
+
+      .text-box {
+        width: 80%; /* Same width as model-viewer */
+        padding: 20px;
+        margin: 20px 0;
+        background-color: white;
+        max-width: 800px; /* Sets a maximum width of 800px */
+        color: black;
+        text-align: left;
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin: 10;
+        padding: 10px;
+        color: black;
+      }
     </style>
-</head>
-<body>
-    <marquee>✨ lunas cyber space ✨</marquee>
-    <h1><blink>💖 cringe ist ein fiktives konzept 💖</blink></h1>
-    <model-viewer id="model-viewer" src="test.glb"
-        ios-src="test.usdz"
-        ar auto-rotate camera-controls>   
-    </model-viewer>
-    <p><blink> babe du siehst so sexy aus wie du 5h am tag auf deinem eigenen instagram profil hängst </blink></p>
+  </head>
+  <body>
+<H2>The BRAT cave</H2>
+  <model-viewer src="fernseher.glb"
+                ios-src="fernseher.usdz"
+                alt="BRAT Cave"
+                ar
+                auto-rotate
+                camera-controls
+                ar-modes="webxr scene-viewer quick-look" 
+                environment-image="neutral">   
+  </model-viewer>
+  <div class="text-box">
+    Legend has it that the BRAT Cave was founded by Madam Roxie, a former fashion mogul and underground icon who vanished from the public eye after a dramatic fallout with the elites of high society. Tired of playing by the rules, she disappeared—only to return stronger, building a hidden empire of fashion, wealth, and rebellion beneath the city. Inside the BRAT Cave: Entering the BRAT Cave is like stepping into a pink-tinted dream world. Chandeliers made of diamond-studded lip gloss tubes hang from the ceiling. Neon signs glow with phrases like “Stay Cute, Stay Dangerous” and “Lip Gloss Before War.” The air smells like vanilla, cash, and a hint of rebellion.  
+  </div>
+   
 </body>
 </html>
-
-      
