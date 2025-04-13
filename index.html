@@ -1,76 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR model</title>
+    <title>Lunas Zimmer</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <style>
-               body {
-        background-color: greenyellow;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        height: 100vh;
+      body {
+        background-color: #000000;
+        color: #e0e0e0;
+        font-family: 'Orbitron', sans-serif;
         margin: 0;
-      }
-
-      .content {
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto; /* Allows scrolling for overflowing content */
-      }
-
-      model-viewer {
-        width: 80%;
-        height: 50%; /* Ensures it takes 50% of the screen height */
-        min-height: 300px; /* Sets a minimum height of 300px */
-        max-width: 800px; /* Sets a maximum width of 800px */
-        margin: 20px 0;
-        background-color: violet;
-        flex-shrink: 0; /* Prevents shrinking of the model-viewer */
-      }
-
-      .text-box {
-        width: 80%; /* Same width as model-viewer */
-        padding: 20px;
-        margin: 20px 0;
-        background-color: white;
-        max-width: 800px; /* Sets a maximum width of 800px */
-        color: black;
-        text-align: left;
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
-        margin-bottom: 20px;
+        justify-content: flex-start;
+        min-height: 100vh;
+        overflow-x: hidden;
       }
 
       h2 {
-        margin: 10;
-        padding: 10px;
-        color: black;
+        font-size: 3em;
+        margin: 30px 0 20px;
+        color: #00ffe1;
+        text-shadow: 0 0 8px #00ffe1, 0 0 20px #ff00ff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: pulse 2s infinite alternate;
+      }
+
+      @keyframes pulse {
+        0% { text-shadow: 0 0 8px #00ffe1, 0 0 20px #ff00ff; }
+        100% { text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffe1; }
+      }
+
+      model-viewer {
+        width: 90%;
+        height: 50vh;
+        max-width: 900px;
+        background-color: #111;
+        border: 2px solid #ff00ff;
+        border-radius: 15px;
+        box-shadow: 0 0 25px #ff00ff;
+        margin: 20px 0;
+      }
+
+      .text-box {
+        width: 90%;
+        max-width: 900px;
+        padding: 25px;
+        margin: 20px 0;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #00ffe1;
+        border-radius: 10px;
+        color: #00ffe1;
+        text-shadow: 0 0 5px #00ffe1;
+        box-shadow: 0 0 15px #00ffe1;
+        backdrop-filter: blur(8px);
+      }
+
+      .text-box p {
+        margin: 10px 0;
+        font-size: 1.1em;
+        line-height: 1.5em;
       }
     </style>
   </head>
   <body>
-<H2>Lunas Zimmer</H2>
-  <model-viewer src="fernseher.glb"
-                ios-src="fernseher.usdz"
-                alt="BRAT Cave"
-                ar
-                auto-rotate
-                camera-controls
-                ar-modes="webxr scene-viewer quick-look" 
-                environment-image="neutral">   
-  </model-viewer>
-  <div class="text-box">
-  Öffnungszeiten 12-22 Uhr
-  Awarenesskonzept vorhanden
-  wechselnde Djs
-  </div>
-   
-</body>
+    <h2>Lunas Zimmer</h2>
+
+    <model-viewer src="fernseher.glb"
+                  ios-src="fernseher.usdz"
+                  alt="3D Modell von Lunas Zimmer"
+                  ar
+                  auto-rotate
+                  camera-controls
+                  ar-modes="webxr scene-viewer quick-look"
+                  environment-image="neutral">
+    </model-viewer>
+
+    <div class="text-box">
+      <p>🕒 <strong>Doors:</strong> 00:00 – open end</p>
+      <p>🧠 <strong>Awareness:</strong> safer space | respekt | kollektiv care</p>
+      <p>🎛️ <strong>Line-Up:</strong> deep techno | industrial | acid grooves</p>
+    </div>
+
+    <div class="text-box">
+      <p>
+        Samstag Nacht in <strong>LUNAS ZIMMER</strong>.<br>
+        Tiefe Frequenzen brechen durch Betonwände.<br>
+        Kein Dresscode. Kein VIP. Nur du, der Bass und das Licht.<br>
+        Zwischen Nebel und Strobe verliert die Uhr ihre Bedeutung.<br><br>
+        Tanz dich leer.<br>
+        Fühl dich frei.<br>
+        Vergiss dich selbst – find dich neu.
+      </p>
+    </div>
+  </body>
 </html>
