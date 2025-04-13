@@ -5,66 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunas Zimmer</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-      body {
-        background-color: #000000;
-        color: #e0e0e0;
-        font-family: 'Orbitron', sans-serif;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000;
+        color: #f5f5f5;
+        font-family: 'Inter', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-        overflow-x: hidden;
+        padding: 40px 20px;
       }
 
       h2 {
-        font-size: 3em;
-        margin: 30px 0 20px;
-        color: #00ffe1;
-        text-shadow: 0 0 8px #00ffe1, 0 0 20px #ff00ff;
+        font-size: 2.5em;
+        font-weight: 600;
+        margin-bottom: 30px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        animation: pulse 2s infinite alternate;
-      }
-
-      @keyframes pulse {
-        0% { text-shadow: 0 0 8px #00ffe1, 0 0 20px #ff00ff; }
-        100% { text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffe1; }
+        letter-spacing: 1px;
+        color: #fff;
+        text-align: center;
       }
 
       model-viewer {
-        width: 90%;
+        width: 100%;
+        max-width: 800px;
         height: 50vh;
-        max-width: 900px;
-        background-color: #111;
-        border: 2px solid #ff00ff;
-        border-radius: 15px;
-        box-shadow: 0 0 25px #ff00ff;
-        margin: 20px 0;
+        background-color: #1a1a1a;
+        margin-bottom: 40px;
       }
 
       .text-box {
-        width: 90%;
-        max-width: 900px;
-        padding: 25px;
-        margin: 20px 0;
-        background: rgba(0, 0, 0, 0.6);
-        border: 1px solid #00ffe1;
-        border-radius: 10px;
-        color: #00ffe1;
-        text-shadow: 0 0 5px #00ffe1;
-        box-shadow: 0 0 15px #00ffe1;
-        backdrop-filter: blur(8px);
+        width: 100%;
+        max-width: 800px;
+        background-color: #111;
+        color: #f0f0f0;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid #333;
       }
 
       .text-box p {
-        margin: 10px 0;
-        font-size: 1.1em;
-        line-height: 1.5em;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .text-box strong {
+        font-weight: 600;
       }
     </style>
   </head>
@@ -82,20 +76,19 @@
     </model-viewer>
 
     <div class="text-box">
-      <p>🕒 <strong>Doors:</strong> 00:00 – open end</p>
-      <p>🧠 <strong>Awareness:</strong> safer space | respekt | kollektiv care</p>
-      <p>🎛️ <strong>Line-Up:</strong> deep techno | industrial | acid grooves</p>
+      <p><strong>Doors:</strong> 00:00 – open end</p>
+      <p><strong>Awareness:</strong> safer space, respekt, kollektiv care</p>
+      <p><strong>Line-Up:</strong> deep techno, industrial, acid</p>
     </div>
 
     <div class="text-box">
       <p>
-        Samstag Nacht in <strong>LUNAS ZIMMER</strong>.<br>
-        Tiefe Frequenzen brechen durch Betonwände.<br>
-        Kein Dresscode. Kein VIP. Nur du, der Bass und das Licht.<br>
-        Zwischen Nebel und Strobe verliert die Uhr ihre Bedeutung.<br><br>
+        Samstag Nacht in LUNAS ZIMMER.<br>
+        Reduziert. Roh. Laut.<br>
+        Kein Dresscode. Kein VIP. Kein Bullshit.<br>
+        Nur du, der Bass und der Raum.<br><br>
         Tanz dich leer.<br>
-        Fühl dich frei.<br>
-        Vergiss dich selbst – find dich neu.
+        Alles andere bleibt draußen.
       </p>
     </div>
   </body>
